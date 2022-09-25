@@ -1,0 +1,32 @@
+Hệ thống đấu giá C2C 
+
+User:	Admin(công ty cung cấp web đấuu giá)	-> quản lý tài khoản, danh bạ, vận chuyển, doanh thu
+		Khách hàng (sản phẩm đấu giá & đấu giá)	-> quản lý sản phẩm đấu giá, doanh thu đấu giá
+		
+Payment method:	nạp tiền vào hệ thống
+
+chức năng nạp tiền và rút tiền qua account online(paypal sandbox)
+
+
+điểm đánh giá:
+1. tìm hiểu, phân tích cho hệ thống
+2. build up system
+	- code FE, BE
+	- design DB/UI
+	- QC (testcase -> report)
+	- Payment thật
+3. hosting trên internet
+4. teamwork (JIRA + bitbucket, roadmap)
+	- phân công, 
+	- họp nhóm(1tuần/lần + báo cáo)
+									+ hình thức
+									+ tham gia
+									+ công việc lần trước
+									+ công việc tuần sau
+									+ chụp hình
+						-> plan
+	- git
+
+
+2 tuần 1 sprint (báo cáo vào CN)
+
