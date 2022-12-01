@@ -12,12 +12,16 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @ToString
-public class Payment extends AbstractEntity{
+public class Payment extends AbstractAuditingEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+
+    @OneToOne
+    @JoinColumn(name = "user_id")
     private User user;
+
     private String walletId;
     private BigDecimal credit;
     private boolean isActive;

@@ -1,6 +1,6 @@
 package hcmute.ec.pa_ec_22_08.auction_web.entity;
 
-import hcmute.ec.pa_ec_22_08.auction_web.enummuration.AuctionStatus;
+import hcmute.ec.pa_ec_22_08.auction_web.enumuration.AuctionStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,12 +12,15 @@ import java.time.LocalDateTime;
 @Table(name = "auction")
 @Getter
 @Setter
-public class Auction extends AbstractEntity {
+public class Auction extends AbstractAuditingEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String sellerId;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
     private Product product;
     private String categoryId;
     private LocalDateTime startTime;

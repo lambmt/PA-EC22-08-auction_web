@@ -1,6 +1,6 @@
 package hcmute.ec.pa_ec_22_08.auction_web.entity;
 
-import hcmute.ec.pa_ec_22_08.auction_web.enummuration.CategoryType;
+import hcmute.ec.pa_ec_22_08.auction_web.enumuration.CategoryType;
 import lombok.Getter;
 import lombok.Setter;
 
