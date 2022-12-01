@@ -3,9 +3,8 @@ package hcmute.ec.pa_ec_22_08.auction_web.controller;
 import hcmute.ec.pa_ec_22_08.auction_web.constant.MessageConstant;
 import hcmute.ec.pa_ec_22_08.auction_web.dto.req.LoginDTO;
 import hcmute.ec.pa_ec_22_08.auction_web.dto.req.SignUpDTO;
-import hcmute.ec.pa_ec_22_08.auction_web.entity.User;
 import hcmute.ec.pa_ec_22_08.auction_web.entity.Password;
-import hcmute.ec.pa_ec_22_08.auction_web.enumuration.UserRole;
+import hcmute.ec.pa_ec_22_08.auction_web.entity.User;
 import hcmute.ec.pa_ec_22_08.auction_web.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,8 +19,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collections;
-
 @RestController
 @RequestMapping("/auction/auth")
 public class AuthenticationController {
@@ -32,13 +29,10 @@ public class AuthenticationController {
     private UserRepository userRepository;
 
     @Autowired
-    private RoleRepository roleRepository;
-
-    @Autowired
     private PasswordEncoder passwordEncoder;
 
     @PostMapping("/login")
-    public ResponseEntity<String> authenticateUser(@RequestBody LoginDTO loginDTO){
+    public ResponseEntity<String> authenticateUser(@RequestBody LoginDTO loginDTO) {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 loginDTO.getUsernameOrEmail(), loginDTO.getPassword()));
 
@@ -47,15 +41,15 @@ public class AuthenticationController {
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<?> registerUser(@RequestBody SignUpDTO signUpDTO){
+    public ResponseEntity<?> registerUser(@RequestBody SignUpDTO signUpDTO) {
 
         // add check for username exists in a DB
-        if(userRepository.existsByUsername(signUpDTO.getUsername())){
+        if (userRepository.existsByUsername(signUpDTO.getUsername())) {
             return new ResponseEntity<>("Username is already taken!", HttpStatus.BAD_REQUEST);
         }
 
         // add check for email exists in DB
-        if(userRepository.existsByEmail(signUpDTO.getEmail())){
+        if (userRepository.existsByEmail(signUpDTO.getEmail())) {
             return new ResponseEntity<>("Email is already taken!", HttpStatus.BAD_REQUEST);
         }
 
@@ -68,10 +62,6 @@ public class AuthenticationController {
 
         Password password = new Password();
         password.setPassword(passwordEncoder.encode(signUpDTO.getPassword()));
-        user.setPassword(password);
-
-        Role roles = roleRepository.findByRoleName(UserRole.ADMIN).get();
-        user.setRoles(Collections.singleton(roles));
 
         userRepository.save(user);
 
