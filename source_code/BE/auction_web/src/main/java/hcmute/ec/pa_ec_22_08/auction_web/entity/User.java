@@ -26,8 +26,11 @@ public class User extends AbstractAuditingEntity{
 
     @NotNull
     @Size(max = 64)
-    @Column(name = "user_id", nullable = true)
-    private String userId;
+    @Column(name = "username", nullable = true)
+    private String username;
+
+    @OneToOne
+    private Password password;
 
     @NotNull
     @Size(max = 64)

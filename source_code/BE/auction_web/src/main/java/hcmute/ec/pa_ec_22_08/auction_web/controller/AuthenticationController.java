@@ -57,11 +57,12 @@ public class AuthenticationController {
         User user = new User();
         user.setFirstName(signUpDTO.getFirstName());
         user.setLastName(signUpDTO.getLastName());
-        user.setUserId(signUpDTO.getUsername());
+        user.setUsername(signUpDTO.getUsername());
         user.setEmail(signUpDTO.getEmail());
 
         Password password = new Password();
         password.setPassword(passwordEncoder.encode(signUpDTO.getPassword()));
+        user.setPassword(password);
 
         userRepository.save(user);
 

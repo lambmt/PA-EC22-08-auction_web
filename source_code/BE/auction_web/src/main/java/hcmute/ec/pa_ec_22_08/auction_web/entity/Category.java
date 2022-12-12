@@ -10,11 +10,11 @@ import javax.persistence.*;
 @Table(name = "Category")
 @Getter
 @Setter
-public class Category extends AbstractEntity {
+public class Category extends AbstractAuditingEntity {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    private Long categoryId;
 
     private String categoryName;
     private CategoryType categoryType;

@@ -15,10 +15,10 @@ import java.math.BigDecimal;
 public class Payment extends AbstractAuditingEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long paymentId;
 
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 

@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class Auction extends AbstractAuditingEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long auctionId;
 
     private String sellerId;
 

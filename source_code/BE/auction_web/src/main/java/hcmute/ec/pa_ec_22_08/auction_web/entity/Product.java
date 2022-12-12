@@ -7,6 +7,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Table(name = "product")
@@ -16,7 +17,7 @@ import java.math.BigDecimal;
 public class Product extends AbstractAuditingEntity{
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    private Long productId;
 
     private String productName;
 
@@ -30,6 +31,11 @@ public class Product extends AbstractAuditingEntity{
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    @OneToMany
+    @JoinColumn(name = "product_image_id")
+    private List<ProductImage> productImages;
+
 
     private ProductStatus productStatus;
     private boolean delFrag;

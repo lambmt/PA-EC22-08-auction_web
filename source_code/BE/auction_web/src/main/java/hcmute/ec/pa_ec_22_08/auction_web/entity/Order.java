@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 public class Order extends AbstractAuditingEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long orderId;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
