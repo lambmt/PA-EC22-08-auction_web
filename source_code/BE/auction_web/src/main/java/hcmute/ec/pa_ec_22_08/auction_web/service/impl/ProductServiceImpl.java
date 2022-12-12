@@ -6,6 +6,7 @@ import hcmute.ec.pa_ec_22_08.auction_web.service.ProductService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -25,5 +26,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getListProduct() {
         return null;
+    }
+
+    @Override
+    public Product getProductDetail(Long id) {
+        Optional<Product> product = productRepository.findByProductId(id);
+        return product.orElse(null);
     }
 }
