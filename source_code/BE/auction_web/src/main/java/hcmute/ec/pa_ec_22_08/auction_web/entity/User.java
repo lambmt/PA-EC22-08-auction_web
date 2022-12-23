@@ -9,25 +9,31 @@ import lombok.ToString;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "User")
 @Getter
 @Setter
 @ToString
-public class User extends AbstractAuditingEntity{
+public class User {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long userId;
 
     @NotNull
     @Size(max = 64)
-    @Column(name = "user_id", nullable = true)
-    private String userId;
+    @Column(name = "username", nullable = true)
+    private String username;
+
+    @OneToOne(mappedBy = "userPassword")
+    private Password password;
+
+    @OneToOne(mappedBy = "userPayment")
+    private Payment payment;
 
     @NotNull
     @Size(max = 64)
@@ -55,7 +61,7 @@ public class User extends AbstractAuditingEntity{
     @Column(name = "avatar_url")
     private String avatarUrl;
 
-    @Column(name = "avatar_url")
+    @Column(name = "address")
     private String address;
 
     @Column(name = "day_of_birth")
@@ -70,8 +76,9 @@ public class User extends AbstractAuditingEntity{
     @Column(name = "del_frag")
     private boolean delFrag;
 
+    private LocalDateTime createdDate;
+    private String createdBy;
+    private LocalDateTime updatedDate;
+    private String updatedBy;
 
-    @OneToOne
-    @JoinColumn(name = "product_id")
-    private List<Product> products;
 }
