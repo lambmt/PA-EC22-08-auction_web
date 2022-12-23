@@ -1,0 +1,54 @@
+.table{
+    margin-top: 50px;
+    width: 100%;
+}
+
+.head{
+
+}
+
+.th{
+    width: 16.66666666667%;
+}
+
+.row{
+    color: rgb(3, 3, 3);
+    position: relative;
+}
+
+.row::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+}
+
+.wrapper-confirm{
+    display: flex;
+    gap: 10px;
+}
+
+.delete,
+.success{
+    padding: 6px 16px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+}
+
+.delete{
+    background-color: rgb(220, 48, 17);
+}
+
+.success{
+    background-color: rgb(78, 234, 11);
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(66, 96, 6);
+    font-size: 1.6rem;
+}

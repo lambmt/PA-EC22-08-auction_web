@@ -1,0 +1,127 @@
+.wrapper{
+    padding-top: 40px;
+}
+
+.container {
+    background-color: #eaedf0;
+    max-width: 560px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    padding-bottom: 50px;
+}
+
+.title{
+    margin-top: 50px;
+    font-size: 2.6rem;
+    font-weight: 520;
+    letter-spacing: 1px;
+}
+
+.navigation {
+    margin-top: 40px;
+    width: 360px;
+    padding: 10px 0;
+    background-color: #e6d6d6;
+    border-radius: 6px;
+    position: relative;
+}
+
+.sign-in{
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    z-index: 1111;
+    cursor: pointer;
+}
+
+.register{
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    z-index: 1111;
+    cursor: pointer;
+}
+
+.bg-active{
+    position: absolute;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    height: 36px;
+    width: 172px;
+    top: 4px;
+    left: calc(4px + 0%);
+}
+
+.bg-active.slide-navi-left-to-right{
+    animation: slideNaviLeftToRight .5s ease forwards;
+}
+
+.bg-active.slide-navi-right-to-left{
+    animation: slideNaviRightToLeft .5s ease forwards;
+}
+
+@keyframes slideNaviLeftToRight {
+    0%{
+        left: calc(4px + 0%);
+    }
+    100%{
+        left: calc(4px + 50%);
+    }
+}
+
+@keyframes slideNaviRightToLeft {
+    0%{
+        left: calc(4px + 50%);
+    }
+    100%{
+        left: calc(4px + 0%);
+    }
+}
+
+.form-login {
+    width: 450px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.wrapper-login{
+    width: 900px;
+    display: flex;
+    margin-left: 0px;
+}
+
+.wrapper-login.login-right-to-left{
+    animation: loginRightToLeft .5s ease forwards;
+}
+
+.wrapper-login.login-left-to-right{
+    animation: loginLeftToRight .5s ease forwards;
+}
+
+@keyframes loginRightToLeft {
+    0%{
+        margin-left: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        margin-left: -450px;
+        opacity: 1;
+    }
+}
+
+@keyframes loginLeftToRight {
+    0%{
+        margin-left: -450px;
+        opacity: 0.5;
+    }
+    100%{
+        margin-left: 0px;
+        opacity: 1;
+    }
+}

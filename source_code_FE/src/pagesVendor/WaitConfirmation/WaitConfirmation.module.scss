@@ -1,0 +1,33 @@
+.wrapper{
+    margin-top: 100px;
+    padding: 0px 80px 100px 80px;
+}
+
+.grid{
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.col{
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 30px;
+}
+
+.l-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+
+.l-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}

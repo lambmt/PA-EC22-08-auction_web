@@ -1,0 +1,98 @@
+.form{
+    height: 650px;
+    width: 100%;
+}
+
+.form-group-name{
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+}
+
+.form-group-fisrt{
+    width: 60%;
+}
+
+.line{
+    position: absolute;
+    top: 0;
+    left: 56%;
+    height: 100%;
+    border-left: 1.5px solid rgb(220, 214, 214);
+}
+
+.form-group-last{
+    width: 40%;
+}
+
+.form-group{
+    margin-top: 30px;
+}
+
+.form-control{
+    background-color: #eaedf0;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.form-message{
+    font-size: 12px;
+    line-height: 14px;
+    padding: 4px 0 0;
+    color: #f33a58;
+}
+
+.form-group-checkbox{
+    margin-top: 20px;
+    display: flex;
+}
+
+.form-control-checkbox{
+    margin-right: 6px;
+}
+
+.text{
+    font-size: 1.3rem;
+}
+
+.policy{
+    text-decoration: none;
+    color: rgb(153, 140, 140);
+}
+
+.form-submit{
+    margin-top: 40px;
+    width: 100%;
+    border: none;
+    background-color: var(--primary-color);
+    padding: 12px 0;
+    border-radius: 4px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.nocati{
+    margin-top: 16px;
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: center;
+}
+
+.reset-password{
+    margin-left: 4px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.vendor{
+    height: 0px; //130px
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+

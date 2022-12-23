@@ -1,0 +1,46 @@
+.wrapper{
+    padding: 10px 100px 100px;
+}
+
+.shipping,
+.personal{
+    margin-top: 50px;
+}
+
+.title{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.row{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-input{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+
+    input{
+        padding: 14px 10px;
+        outline: none;
+        border: 1.5px solid #ccc;
+        border-radius: 2px;
+        margin-top: 6px;
+    }
+}
+
+.wrapper-btn{
+    margin-top: 80px;
+}
+
+.btn{
+    padding: 14px 20px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgb(10, 179, 80);
+    border: none;
+    cursor: pointer;
+}

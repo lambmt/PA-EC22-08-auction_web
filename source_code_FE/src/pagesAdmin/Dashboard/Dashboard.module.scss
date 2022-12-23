@@ -1,0 +1,27 @@
+.wrapper{
+    padding: 40px 30px 80px;
+}
+
+.quantity{
+    display: flex;
+}
+
+.wrapper-one{
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.label{
+    font-size: 1.4rem;
+}
+
+.data{
+    font-weight: 600;
+    font-size: 1.8rem;
+}

@@ -1,0 +1,44 @@
+@import 'normalize.css';
+
+:root {
+    --primary-background-color: #244D61;
+    --primary-color: #557687;
+    --primary-text-color: #222;
+    --primary-color-hover: #6c7ae0;
+
+    --width-dashboard: 200px;
+    --height-header: 70px;
+    --height-header-admin: 40px;
+    --height-header-topbar: 40px;
+    --height-header-menu: calc(var(--height-header) - var(--height-header-topbar));
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-white-222: #222;
+
+    --max-width-web: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'ProximaNova', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    overflow-y: overlay;
+    background: #ADADAD;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}

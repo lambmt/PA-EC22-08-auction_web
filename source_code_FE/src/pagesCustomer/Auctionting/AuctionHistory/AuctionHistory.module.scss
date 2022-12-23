@@ -1,0 +1,63 @@
+.table{
+    border: 1px solid #000;
+    position: relative;
+    border-left: none;
+}
+
+.table::after{
+    position: absolute;
+    content: "";
+    height: .5px;
+    width: 100%;
+    background-color: #000;
+    top: 20%;
+    left: 0;
+}
+
+.line::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: .5px;
+    background-color: #000;
+    top: 0px;
+    left: 50%;
+}
+
+.line::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: .5px;
+    background-color: #000;
+    top: 0px;
+    left: 70%;
+}
+
+.my-bid{
+    background-color: rgb(4, 93, 121);
+}
+
+.my-bid-user{
+
+}
+
+.color-w{
+    color:#fff
+}
+
+.status{
+    background-color: #cecad8;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 4px 0px;
+    box-shadow: 0px 1px 4px rgb(176, 154, 154) inset;
+}
+
+.more{
+    color: rgb(225, 18, 18);
+}
+
+.largest{
+    color: rgb(7, 124, 40);
+}

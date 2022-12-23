@@ -1,0 +1,94 @@
+.wrapper{
+    padding: 60px 80px 100px;
+}
+
+.title{
+    color: rgb(134, 129, 129);
+    text-align: center;
+}
+
+.grid{
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.row-detail{
+    display: flex;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.col{
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 10px;
+}
+
+.l-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.wrapper-col{
+    margin-top: 50px;
+}
+
+.head{
+    font-size: 1.8rem;
+}
+
+.wrapper-info{
+    width: 100%;
+    font-size: 1.4rem;
+    margin-top: 30px;
+}
+
+.label{
+    text-transform: uppercase;
+}
+
+.result{
+    width: 100%;
+    color: rgb(115, 105, 105);
+    margin-top: 6px;
+}
+
+.summary{
+    margin-top: 30px;
+    background-color: rgb(236, 228, 228);
+    padding: 20px 60px;
+}
+
+.wrapper-summary,
+.wrapper-summary-total,
+.wrapper-summary-product{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    padding: 20px 0px;
+}
+
+.wrapper-summary-product,
+.price{
+    color: rgb(115, 105, 105);
+}
+
+.wrapper-summary-total{
+    font-weight: 600;
+
+    .price{
+        color: #000;
+    }
+}
+
+.bor-sum:not(:last-child) {
+    border-bottom: 1px solid rgb(199, 174, 174);
+}
